@@ -8,6 +8,9 @@ import useGetAllJobs from '@/hooks/useGetAllJobs'
 import { useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 
+//
+import Other from './shared/Other'
+
 const Home = () => {
   useGetAllJobs();
   const { user } = useSelector(store => store.auth);
@@ -23,6 +26,10 @@ const Home = () => {
       <HeroSection />
       <CategoryCarousel />
       <LatestJobs />
+      {/* <CategoryCarousel/> */}
+
+      <Other/>
+
       <Footer />
     </div>
   )
